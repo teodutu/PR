@@ -11,3 +11,5 @@ si `sample`. Simplu, dar macar nu pare un jeg ca laburile de pana acum.
 
 ## Laborator 7
 Calcul de probabilitati axate pe tot ceea ce conteaza in viata (manele).
+Exercitiile nu prea au sens si ocazional se bat cap in cap cu explicatiile din
+lab, air formularile sunt interpretabile... echipa de PR...

@@ -9,11 +9,9 @@ TN2 = 0.98
 probBad = 0.01
 
 
-print("Probability of a TruePos1-FalseNeg2 combination:")
-probBad * TP1 * FN2
+print("Probability of a FalsePos1-TrueNeg2 combination:")
+(1 - probBad) * FP1 * TN2
 
 
 print("Probability of a legit packet being considered a virus:")
-virusPos = probBad * (TP1 * TP2 + TP1 * FN2 + TP2 * FN1)
-legitPos = (1 - probBad) * (FP1 * FP2 + FP1 * TN2 + FP2 * TN1)
-legitPos / (legitPos + virusPos)
+1 - TN1 * TN2

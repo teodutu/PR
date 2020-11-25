@@ -16,5 +16,6 @@ unempData = getEurostatRCV(kod = "lfst_r_lfu3rt")
 print("Average unemployment rate in area AT:")
 mean(unempData$value[unempData$geo == "AT"])
 
+
 print("Median of the unemployment rate in area AT1:")
 median(unempData$value[unempData$geo == "AT1"])
