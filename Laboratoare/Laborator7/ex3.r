@@ -14,25 +14,23 @@ album_2 = data.frame(autor = c("Alberto voce de diamant", "Florin Salam",
     "Nu mai pot sa ma indragostesc", "Am scoala de mafiot", "Cunosc omul dupa fata",
     "Taicutul meu", "Nevasta mea", "Ce dimineata trista", "cum te misti, asa vorbesti"))
 
+binomProb <- function(p, s, n) {
+    choose(n, s) * p^s * (1 - p)^(n - s)
+}
 
-print("The probability of listening to Adi the Wonder 5 times out of 50:")
+
+print("The probability of listening to either LEGEND 5 times out of 50:")
 pWonder = (
 	sum(album_1$autor == "Adrian Minune") / length(album_1$autor)
 	+ sum(album_2$autor == "Adrian Minune") / length(album_2$autor)
 ) / 2
-pWonder5outOf50 = choose(50, 5) * pWonder^5 * (1 - pWonder)^(50 - 5)
-print(pWonder5outOf50)
-
-print("The probability of listening to Vali the Storm 5 times out of 50:")
 pStorm = (
 	sum(album_1$autor == "Vali Vijelie") / length(album_1$autor)
 	+ sum(album_2$autor == "Vali Vijelie") / length(album_2$autor)
 ) / 2
-pStorm5outOf50 = choose(50, 5) * pStorm^5 * (1 - pStorm)^(50 - 5)
-print(pStorm5outOf50)
 
-print("The probability of listening to either LEGEND 5 times out of 50:")
-pWonder5outOf50 + pStorm5outOf50 - pWonder5outOf50 * pStorm5outOf50
+pBoth = pStorm + pWonder
+binomProb(pBoth, 5, 50)
 
 
 numHitsWonderDwarf = (
@@ -51,5 +49,5 @@ numHitsAlbum1 = (
 print("Number of hits on the first masterpiece:")
 print(numHitsAlbum1)
 
-print("Probability of either titan being on the first masterpiece:")
+print("Probability of either titan being featured on the first masterpiece:")
 numHitsAlbum1 / numHitsWonderDwarf
