@@ -56,6 +56,6 @@ ggsave("plot_ex5.png")
 
 
 print("========== Ex 6 ==========")
-g = ggplot(ex5_data, aes(time, NPE_E, group=geo))
+g = ggplot(ex5_data, aes(time, NPE_E, group=time))
 g = g + geom_boxplot()
 ggsave("plot_ex6.png")
