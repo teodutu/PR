@@ -21,3 +21,7 @@ pana sa fie ok.
 Se modifica si se ploteaza in diferite moduri (histograma, linie,
 [box plot](https://en.wikipedia.org/wiki/Box_plot)) un set de date numai bun
 pentru *BD*: tari, numar de angajati, investitii, gunoaie din astea.
+
+## Laborator 9
+Cel mai gunoi de pana acum. Macar alea facute cu Google translate aveau sens.
+Aici pare ca nici cine a facut labul n-a inteles nimic din el...
